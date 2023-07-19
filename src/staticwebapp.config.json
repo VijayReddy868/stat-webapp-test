@@ -1,5 +1,10 @@
 {
   "routes": [
+   
+    {
+      "route": "/login",
+      "rewrite": "/.auth/login/aad"
+    },
     {
       "route": "/*",
       "allowedRoles": ["authenticated"]
@@ -7,11 +12,8 @@
     {
       "route": "/api/*",
       "allowedRoles": ["authenticated"]
-    },
-    {
-      "route": "/login",
-      "rewrite": "/.auth/login/aad"
     }
+   
   ],
   "responseOverrides": {
     "401": {
