@@ -1,17 +1,32 @@
 {
   "routes": [
     {
-      "route": "/index.html",
+      "route": "/*",
       "allowedRoles": ["authenticated"]
+    },
+    {
+      "route": "/api/*",
+      "allowedRoles": ["authenticated"]
+    },
+    {
+      "route": "/login",
+      "rewrite": "/.auth/login/aad"
     }
   ],
   "responseOverrides": {
     "401": {
-      "statusCode": 302,
-      "redirect": "/.auth/login/aad"
+      "redirect": "/login",
+      "statusCode": 302
     }
-  }
-"navigationFallback": {
-    "rewrite": "/test.html"
+  },
+  "auth": {
+    "identityProviders": {
+      "azureActiveDirectory": {
+        "registration": {
+          "openIdIssuer": "https://login.microsoftonline.com/<tenantid>/v2.0",
+          "clientIdSettingName": "STATICWEBCLIENTID"
+        }
+      }
+    }
   }
 }
