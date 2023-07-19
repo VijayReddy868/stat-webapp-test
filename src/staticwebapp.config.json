@@ -6,11 +6,11 @@
       "rewrite": "/.auth/login/aad"
     },
     {
-      "route": "/*",
+      "route": "/",
       "allowedRoles": ["authenticated"]
     },
     {
-      "route": "/api/*",
+      "route": "/api/",
       "allowedRoles": ["authenticated"]
     }
    
