@@ -18,7 +18,9 @@
      const userAction = async () => {
     const response = await fetch('/api/WeatherForecast');
      const myJson = await response.json(); //extract JSON from the http response
-      alert(myJson);// do something with myJson
+       var r=JSON.parse(response);
+          $("#main").html(r.base);
+      
      }
  </script>
   <button type="submit" onclick="userAction()">userAction</button>
