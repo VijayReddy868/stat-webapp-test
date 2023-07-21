@@ -1,34 +1,4 @@
 {
-  "routes": [
+  
    
-    {
-      "route": "/login",
-      "rewrite": "/.auth/login/aad"
-    },
-    {
-      "route": "/",
-      "allowedRoles": ["authenticated"]
-    },
-    {
-      "route": "/api/",
-      "allowedRoles": ["authenticated"]
-    }
-   
-  ],
-  "responseOverrides": {
-    "401": {
-      "redirect": "/login",
-      "statusCode": 302
-    }
-  },
-  "auth": {
-    "identityProviders": {
-      "azureActiveDirectory": {
-        "registration": {
-          "openIdIssuer": "https://login.microsoftonline.com/<tenantid>/v2.0",
-          "clientIdSettingName": "STATICWEBCLIENTID"
-        }
-      }
-    }
-  }
 }
