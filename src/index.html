@@ -12,6 +12,15 @@
   <main>
     <h1>Vanilla JavaScript App</h1>
   </main>
+<button type="submit" onclick="UserAction()">Call Web Api </button>
+ <script>
+     const userAction = async () => {
+    const response = await fetch('/api/WeatherForecast');
+     const myJson = await response.json(); //extract JSON from the http response
+      alert(myJson);// do something with myJson
+     }
+ </script>
+  
 </body>
 
 </html>
