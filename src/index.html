@@ -19,7 +19,6 @@
     const response = await fetch('/api/WeatherForecast');
      var data = await response.json(); //extract JSON from the http response
       console.log(data);
-      show(data);
      }
  </script>
   <button type="submit" onclick="userAction()">userAction</button>
