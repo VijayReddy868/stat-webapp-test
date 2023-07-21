@@ -18,9 +18,7 @@
      const userAction = async () => {
     const response = await fetch('/api/WeatherForecast');
      const myJson = await response.json(); //extract JSON from the http response
-       var r=myJson.parse(response);
-          $("#main").html(r.base);
-       console.log(myJson);
+     console.log(myJson);
       
      }
  </script>
