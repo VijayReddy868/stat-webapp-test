@@ -14,7 +14,7 @@
       "statusCode": 302,
       "redirect": "/.auth/login/aad"
     }
-  }
+  },
 "navigationFallback": {
     "rewrite": "/test.html"
   }
