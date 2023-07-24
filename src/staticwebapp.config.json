@@ -3,11 +3,8 @@
      {
       "route": "/api/WeatherForecast",
       "allowedRoles": ["authenticated"]
-    },
-     {
-      "route": "/index.html",
-      "allowedRoles": ["authenticated"]
     }
+     
   ]
   
  
