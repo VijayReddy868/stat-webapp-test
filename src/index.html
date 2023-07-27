@@ -11,6 +11,7 @@
 <body>
   <main>
     <h1>Vanilla JavaScript App</h1>
+    <p id="demo"></p>
   </main>
 
   
@@ -18,7 +19,9 @@
      const userAction = async () => {
     const response = await fetch('/api/WeatherForecast');
      var data = await response.json(); //extract JSON from the http response
-      window.alert(data);
+      document.getElementById("demo").innerHTML = data;
+      console.log(data);
+       
       }
  </script>
   <button type="submit" onclick="userAction()">userAction</button>
