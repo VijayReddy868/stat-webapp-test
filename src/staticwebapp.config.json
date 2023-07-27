@@ -5,13 +5,17 @@
       "allowedRoles": ["authenticated"]
     }
   ],
+  "navigationFallback": {
+    "rewrite": "index.html",
+    "exclude": ["/images/*.{png,jpg,gif}", "/css/*"]
+  }
    "responseOverrides": {
     "400": {
       "rewrite": "/invalid-invitation-error.html"
     },
     "401": {
       "statusCode": 302,
-      "redirect": "/test.html"
+      "redirect": "/login"
     },
     "403": {
       "rewrite": "/custom-forbidden-page.html"
