@@ -23,8 +23,7 @@
     {
        const response = await fetch('/api/WeatherForecast');
        var data = await response.json(); //extract JSON from the http response
-       document.getElementById("demo").innerHTML = data;
-       console.log(data);
+      console.log(data);
      function fillTable(data) {
     data.map((row, i) => {
         let htmlToAdd = '<tr>'
@@ -37,10 +36,10 @@
         });
         htmlToAdd += '</tr>';
         document.querySelector('#results-table table').innerHTML += htmlToAdd;
-    })
-}
+        })
+      }
+  fillTable(data);
 
-fillTable(data);
        
     }
  </script>
