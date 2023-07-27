@@ -10,12 +10,12 @@
 
 <body>
   <main>
+    
     <h1>Vanilla JavaScript App</h1>
     
   </main>
 
-  
- <script type="text/javascript" language="javascript">
+  <script type="text/javascript" language="javascript">
      const userAction = async () => 
     {
        const response = await fetch('/api/WeatherForecast');
@@ -23,7 +23,8 @@
       console.log(data);
    }
  </script>
-  <button type="submit" onclick="userAction()">userAction</button>
+  
+  <button type="submit" onclick="userAction()"> userAction </button>
+  
 </body>
-
 </html>
