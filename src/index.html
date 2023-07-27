@@ -11,10 +11,7 @@
 <body>
   <main>
     <h1>Vanilla JavaScript App</h1>
-    <div id="results-table">
-    <table>
-    </table>
-    </div>
+    
   </main>
 
   
@@ -24,24 +21,7 @@
        const response = await fetch('/api/WeatherForecast');
        var data = await response.json(); //extract JSON from the http response
       console.log(data);
-     function fillTable(data) {
-    data.map((row, i) => {
-        let htmlToAdd = '<tr>'
-        row.map(cell => {
-            if (i === 0) {
-                htmlToAdd += '<th>' + cell + '</th>';
-            } else {
-                htmlToAdd += '<td>' + cell + '</td>';
-            }
-        });
-        htmlToAdd += '</tr>';
-        document.querySelector('#results-table table').innerHTML += htmlToAdd;
-        })
-      }
-  fillTable(data);
-
-       
-    }
+   }
  </script>
   <button type="submit" onclick="userAction()">userAction</button>
 </body>
