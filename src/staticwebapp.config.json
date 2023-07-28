@@ -1,4 +1,9 @@
 {
-
+ "routes": [
+      {
+      "route": "/api/WeatherForecast",
+      "allowedRoles": ["authenticated"]
+    }
+  ]
   
 }
