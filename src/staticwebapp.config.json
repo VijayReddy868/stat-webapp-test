@@ -1,9 +1,8 @@
 {
  "routes": [
       {
-       "route": "/api",
-      "methods": ["GET"],
-      "allowedRoles": ["registeredusers"]
+       "route": "/api/test",
+       "allowedRoles": ["test"]
      
     }
   ]
