@@ -22,6 +22,11 @@
        var data = await response.json(); //extract JSON from the http response
       console.log(data);
    }
+
+   (async function() {
+        const { text } = await( await fetch(`/api/message`)).json();
+        document.querySelector('#name').textContent = text;
+    }());
  </script>
   
   <button type="submit" onclick="userAction()"> userAction </button>
